@@ -152,7 +152,7 @@ footer {
 
 footer .content-wrapper {
   width: 55%;
-  margin: 50px 0;  
+  margin: 50px 0;
 }
 
 footer p {
@@ -213,7 +213,7 @@ aside {
 .features article {
   width: 63%;
   margin: 30px 0;
-}  
+}
 
 .features .features-items {
   display: flex;
@@ -232,6 +232,10 @@ aside {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+}
+
+.reviews img {
+  width: 30%;
 }
 
 .reviews h2 {
@@ -380,89 +384,260 @@ faq .content-wrapper {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
+@media only screen and (min-width: 768px) {
+  /* Tablet Styles here */
 
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
+  .content-wrapper {
+    max-width: 640px;
+    margin: 100px 0;
+  }
 
-/* ==========================================================================
+  /*---------------- Base Header - Footer Styles ---------------------*/
+
+  header {
+    padding: 33px 0;
+    justify-content: ;
+  }
+
+  header .content-wrapper {
+    justify-content: space-between;
+  }
+
+
+
+  header nav ul {
+    justify-content: flex-end;
+  }
+
+  .header-divider {
+    display: none;
+  }
+
+  footer .content-wrapper {
+    width: 90%;
+    margin: 100px 0;
+  }
+
+  footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap;
+  }
+
+  footer h4 {
+    margin: 0 0 40px 0;
+  }
+
+  footer .contact {
+    margin: 0;
+    text-align: center;
+  }
+
+  footer .social {
+    width: 30%;
+    text-align: center;
+  }
+
+  /* Hero Area */
+
+
+  /* Aside */
+
+  aside .content-wrapper {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+  }
+
+  aside .form-description {
+    margin: 0;
+    width: 40%;
+  }
+
+  aside .form {
+    width: 40%;
+    margin: 0;
+  }
+
+  /* Features */
+
+  .features h2 {
+    margin-bottom: 20px;
+  }
+
+  .features article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    flex-basis: 35%;
+    margin: 30px 0;
+  }
+
+  .features .features-items {
+    justify-content: space-around;
+
+  }
+
+  .features p {
+    margin: 0;
+  }
+
+  /* Reviews */
+
+  .reviews article {
+    display: flex;
+    justify-content: center;
+  }
+
+  .reviews h2 {
+    margin-bottom: 0px;
+    width: 80%;
+  }
+
+  .reviews .pic-txt {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .reviews h3 {
+    width: 40%;
+    margin: 0;
+  }
+
+  .reviews .review-txt {
+    margin-left: 10px;
+  }
+
+  /* ==========================================================================
+   About Page
+   ========================================================================== */
+
+  .mission-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+  }
+
+  .mission p {
+    width: 47%;
+  }
+
+  .contact-section .content-wrapper h2 {
+    width: 85%;
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .general-info {
+    width: 42%;
+  }
+
+  .chat {
+    width: 42%;
+  }
+
+  /* ==========================================================================
+   FAQ Page
+   ========================================================================== */
+  .faq .content-wrapper {
+    margin: 50px 0 0 0;
+  }
+  
+   .faq .faq-questions {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+
+  .faq-content {
+    flex-basis: 45%;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    /* Desktop Styles here */
+  }
+
+  /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-@media print {
+  @media print {
 
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
+    *,
+    *::before,
+    *::after {
+      background: #fff !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
 
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
 
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
+    a[href]::after {
+      content: " (" attr(href) ")";
+    }
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
+    abbr[title]::after {
+      content: " (" attr(title) ")";
+    }
 
-  /*
+    /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+      content: "";
+    }
 
-  pre {
-    white-space: pre-wrap !important;
-  }
+    pre {
+      white-space: pre-wrap !important;
+    }
 
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
 
-  /*
+    /*
    * Printing Tables:
    * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
    */
-  thead {
-    display: table-header-group;
-  }
+    thead {
+      display: table-header-group;
+    }
 
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
 
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
 
-  h2,
-  h3 {
-    page-break-after: avoid;
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
   }
 }
