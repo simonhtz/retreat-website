@@ -384,6 +384,10 @@ faq .content-wrapper {
    Modify as content requires.
    ========================================================================== */
 
+
+/*----------------------TABLET-------------------------*/
+
+
 @media only screen and (min-width: 768px) {
   /* Tablet Styles here */
 
@@ -441,6 +445,9 @@ faq .content-wrapper {
 
   /* Hero Area */
 
+  .hero-area .content-wrapper {
+    height: 600px;
+  }
 
   /* Aside */
 
@@ -478,6 +485,7 @@ faq .content-wrapper {
 
   .features .features-items {
     justify-content: space-around;
+    align-items: flex-start;
 
   }
 
@@ -550,8 +558,8 @@ faq .content-wrapper {
   .faq .content-wrapper {
     margin: 50px 0 0 0;
   }
-  
-   .faq .faq-questions {
+
+  .faq .faq-questions {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -560,84 +568,165 @@ faq .content-wrapper {
   .faq-content {
     flex-basis: 45%;
   }
+}
 
-  @media only screen and (min-width: 1200px) {
-    /* Desktop Styles here */
+/*----------------------DESKTOP-------------------------*/
+
+@media only screen and (min-width: 1200px) {
+  /* Desktop Styles here */
+
+  .content-wrapper {
+    max-width: 960px;
+  }
+
+  /*---------------- Base Header - Footer Styles ---------------------*/
+
+  header {
+    padding: 15px 0;
+  }
+
+  footer .content-wrapper {
+    width: 100%;
+  }
+
+  footer .footer-content {
+    justify-content: space-between;
+  }
+
+  footer .social {
+    width: 22%;
+  }
+
+  /* Hero Area */
+
+  .hero-area h1 {
+    width: 70%;
+  }
+
+  /* Aside */
+
+  aside .content-wrapper {
+    justify-content: space-around;
+  }
+
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+      width: 30%
+  }
+
+  /* Features */
+
+  .features h2 {
+    width: 90%;
+  }
+
+  .features article {
+    flex-basis: 23%;
+    margin: 0 10px 20px 10px;
+  }
+
+
+  /* Reviews */
+
+  .reviews h2 {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  .reviews .review-txt {
+    margin-left: 20px;
+    width: 45%;
   }
 
   /* ==========================================================================
+   About Page
+   ========================================================================== */
+   .mission h2,
+   .contact-section .content-wrapper h2 {
+       width: 90%
+   }
+
+/* ==========================================================================
+  FAQ Page
+  ========================================================================== */
+   .faq h2 {
+       width: 100%;
+   }
+
+}
+
+/* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-  @media print {
+@media print {
 
-    *,
-    *::before,
-    *::after {
-      background: #fff !important;
-      color: #000 !important;
-      /* Black prints faster */
-      box-shadow: none !important;
-      text-shadow: none !important;
-    }
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-    a,
-    a:visited {
-      text-decoration: underline;
-    }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
 
-    a[href]::after {
-      content: " (" attr(href) ")";
-    }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
 
-    abbr[title]::after {
-      content: " (" attr(title) ")";
-    }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
 
-    /*
+  /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-    a[href^="#"]::after,
-    a[href^="javascript:"]::after {
-      content: "";
-    }
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
 
-    pre {
-      white-space: pre-wrap !important;
-    }
+  pre {
+    white-space: pre-wrap !important;
+  }
 
-    pre,
-    blockquote {
-      border: 1px solid #999;
-      page-break-inside: avoid;
-    }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
 
-    /*
+  /*
    * Printing Tables:
    * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
    */
-    thead {
-      display: table-header-group;
-    }
+  thead {
+    display: table-header-group;
+  }
 
-    tr,
-    img {
-      page-break-inside: avoid;
-    }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
 
-    p,
-    h2,
-    h3 {
-      orphans: 3;
-      widows: 3;
-    }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-    h2,
-    h3 {
-      page-break-after: avoid;
-    }
+  h2,
+  h3 {
+    page-break-after: avoid;
   }
 }
