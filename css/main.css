@@ -89,62 +89,55 @@ textarea {
 
 /*---------------- Global Styles ---------------------*/
 
-* {
-  outline: red dotted 1px;
+/* General Styles */
+
+html {
+  font-size: 16px;
 }
 
-/* General Styles */
- 
-html {
-  font-size: 16px;	
-}
- 
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
   text-align: left;
   color: #e2e3ed;
 }
- 
-ul, 
+
+ul,
 ol {
-  list-style: none; 
+  list-style: none;
+  padding: 0;
 }
- 
+
+li {
+  padding: 0 5px;
+}
+
 a {
   color: #e2e3ed;
-  text-decoration: none;	
+  text-decoration: none;
 }
- 
+
 h2 {
   font-family: "Poppins", sans-serif;
   font-size: 1.875em;
   font-weight: 500;
 }
- 
-h3, 
+
+h3,
 h4 {
   font-family: "Poppins", sans-serif;
   margin: 20px 0;
-  font-size: 1.125em; 
+  font-size: 1.125em;
   font-weight: 500;
 }
- 
+
 p {
   font-size: 0.875em;
-  line-height: 1.125em;
+  line-height: 1.5em;
 }
- 
-img {
- 
-}
- 
-figure {
- 
-}
- 
+
 address {
-  font-style: normal; 
+  font-style: normal;
 }
 
 .content-wrapper {
@@ -164,6 +157,11 @@ footer {
 
 header {
   padding: 15px 0;
+}
+
+header a {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.5rem;
 }
 
 header .content-wrapper {
@@ -194,6 +192,11 @@ header nav ul {
   width: 100%;
 }
 
+header nav ul li a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
 footer {
   flex-direction: column;
 }
@@ -203,8 +206,14 @@ footer .content-wrapper {
   margin: 50px 0;
 }
 
+footer h4 {
+  text-align: center;
+
+}
+
 footer p {
   margin: 0;
+  text-align: center;
 }
 
 footer .contact {
@@ -232,9 +241,22 @@ footer .copyright {
 /* Hero Area */
 
 .hero-area {
+  background: url(../img/balihoch-mob.jpg) #202322 fixed top center;
+}
+
+.hero-area .hero-content {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background: #202322;
+  opacity: .6;
+}
+
+.hero-area .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .hero-area h1 {
@@ -242,6 +264,8 @@ footer .copyright {
   font-size: 2.24rem;
   line-height: 2.6875rem;
   font-weight: 500;
+  color: #ffffff;
+  margin: 0;
 }
 
 /* Aside */
@@ -249,17 +273,54 @@ footer .copyright {
 aside {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-flow: row wrap;
   background: #527158;
+}
+
+aside .form-description {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+aside .form {
+  margin-top: 30px;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: .875em 1em;
+}
+
+input[type=button] {
+  width: 100%;
+  padding: .875em 1em;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Features */
 
 .features {
+  background: url(../img/pushhandshoch.jpg);
+}
+
+.features .features-content {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background: #202322;
+  opacity: 0.8;
 }
 
 .features h2 {
@@ -285,22 +346,23 @@ aside {
 /* Reviews */
 
 .reviews {
+  background: #2a423a;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  background: #2a423a;
 }
 
 .reviews img {
-  width: 30%;
+  width: 100%;
 }
 
 .reviews h2 {
   margin-bottom: 40px;
+  width: 100%;
 }
 
-.reviews h3 {
-  width: 55%;
+.reviews p {
+  margin: 0;
 }
 
 /* ==========================================================================
@@ -349,6 +411,7 @@ faq .content-wrapper {
 
 .faq h2 {
   margin-bottom: 40px;
+  text-transform: uppercase;
 }
 
 .faq-content {
@@ -443,6 +506,13 @@ faq .content-wrapper {
    Modify as content requires.
    ========================================================================== */
 
+/*----------------------HERO-PHOTO-------------------------*/
+
+@media only screen and (min-width: 475px) {
+  .hero-area {
+    background: url(../img/baliwide-large.jpg) #202322 fixed center center;
+  }
+}
 
 /*----------------------TABLET-------------------------*/
 
@@ -458,8 +528,8 @@ faq .content-wrapper {
   /*---------------- Base Header - Footer Styles ---------------------*/
 
   header {
-    padding: 33px 0;
-    justify-content: ;
+    padding: 0;
+    justify-content: center;
   }
 
   header .content-wrapper {
@@ -484,7 +554,7 @@ faq .content-wrapper {
   footer .footer-content {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
     flex-flow: row nowrap;
   }
 
@@ -503,10 +573,6 @@ faq .content-wrapper {
   }
 
   /* Hero Area */
-
-  .hero-area .content-wrapper {
-    height: 600px;
-  }
 
   /* Aside */
 
@@ -528,6 +594,10 @@ faq .content-wrapper {
   }
 
   /* Features */
+
+  .features {
+    background: url(../img/pushhands-min.jpg);
+  }
 
   .features h2 {
     margin-bottom: 20px;
@@ -560,22 +630,26 @@ faq .content-wrapper {
   }
 
   .reviews h2 {
-    margin-bottom: 0px;
-    width: 80%;
+    margin: 0;
   }
 
   .reviews .pic-txt {
     display: flex;
+    align-items: center;
     flex-flow: row nowrap;
   }
 
+  .reviews img {
+    width: 50%;
+  }
+
   .reviews h3 {
-    width: 40%;
-    margin: 0;
+    width: 60%;
+    margin: 0 0 20px 0;
   }
 
   .reviews .review-txt {
-    margin-left: 10px;
+    margin-left: 10%;
   }
 
   /* ==========================================================================
@@ -594,7 +668,7 @@ faq .content-wrapper {
   }
 
   .contact-section .content-wrapper h2 {
-    width: 85%;
+    width: 65%;
   }
 
   .contact-content {
@@ -640,16 +714,12 @@ faq .content-wrapper {
 
   /*---------------- Base Header - Footer Styles ---------------------*/
 
-  header {
-    padding: 15px 0;
-  }
-
   footer .content-wrapper {
     width: 100%;
   }
 
   footer .footer-content {
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   footer .social {
@@ -670,7 +740,7 @@ faq .content-wrapper {
 
   aside .content-wrapper .form-description,
   aside .content-wrapper .form {
-      width: 30%
+    width: 30%
   }
 
   /* Features */
@@ -689,28 +759,27 @@ faq .content-wrapper {
 
   .reviews h2 {
     margin-bottom: 50px;
-    width: 100%;
+    width: 80%;
   }
 
-  .reviews .review-txt {
-    margin-left: 20px;
-    width: 45%;
+  .reviews h3 {
+    width: auto;
   }
 
   /* ==========================================================================
    About Page
    ========================================================================== */
-   .mission h2,
-   .contact-section .content-wrapper h2 {
-       width: 90%
-   }
+  .mission h2,
+  .contact-section .content-wrapper h2 {
+    width: 90%
+  }
 
-/* ==========================================================================
+  /* ==========================================================================
   FAQ Page
   ========================================================================== */
-   .faq h2 {
-       width: 100%;
-   }
+  .faq h2 {
+    width: 100%;
+  }
 
 }
 
