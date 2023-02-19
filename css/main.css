@@ -136,6 +136,15 @@ p {
   line-height: 1.5em;
 }
 
+img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+figure {
+  margin: 0;
+}
+
 address {
   font-style: normal;
 }
@@ -159,17 +168,20 @@ header {
   padding: 15px 0;
 }
 
-header a {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 1.5rem;
-}
-
 header .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
   margin: 0;
+}
+
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .header-divider {
@@ -241,7 +253,8 @@ footer .copyright {
 /* Hero Area */
 
 .hero-area {
-  background: url(../img/balihoch-mob.jpg) #202322 fixed top center;
+  background: url(../img/baliwide-med.jpg) #2a423a fixed top center no-repeat;
+  background-size: cover;
 }
 
 .hero-area .hero-content {
@@ -250,6 +263,7 @@ footer .copyright {
   flex-flow: row wrap;
   background: #202322;
   opacity: .6;
+  height: 350px;
 }
 
 .hero-area .content-wrapper {
@@ -506,14 +520,6 @@ faq .content-wrapper {
    Modify as content requires.
    ========================================================================== */
 
-/*----------------------HERO-PHOTO-------------------------*/
-
-@media only screen and (min-width: 475px) {
-  .hero-area {
-    background: url(../img/baliwide-large.jpg) #202322 fixed center center;
-  }
-}
-
 /*----------------------TABLET-------------------------*/
 
 
@@ -536,10 +542,20 @@ faq .content-wrapper {
     justify-content: space-between;
   }
 
-
+  header figure {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+  }
 
   header nav ul {
     justify-content: flex-end;
+  }
+
+  header nav ul li {
+    padding: 0 10px;
   }
 
   .header-divider {
@@ -573,6 +589,17 @@ faq .content-wrapper {
   }
 
   /* Hero Area */
+
+  .hero-area {
+    background: url(../img/baliwide-large.jpg) #2a423a fixed center center no-repeat;
+    height: 600px;
+  }
+
+  .hero-area .hero-content {
+    background: #202322;
+    opacity: .6;
+    height: 600px;
+  }
 
   /* Aside */
 
@@ -713,6 +740,14 @@ faq .content-wrapper {
   }
 
   /*---------------- Base Header - Footer Styles ---------------------*/
+
+  header figure {
+    padding: 10px 0;
+  }
+
+  header nav ul li {
+    padding: 0 20px;
+  }
 
   footer .content-wrapper {
     width: 100%;
