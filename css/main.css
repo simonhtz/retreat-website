@@ -188,6 +188,7 @@ header figure {
   width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
+  background: #3a3a3a;
 }
 
 header nav {
@@ -196,6 +197,9 @@ header nav {
   align-items: center;
   flex-flow: row wrap;
   width: 60%;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 header nav ul {
@@ -204,13 +208,13 @@ header nav ul {
   width: 100%;
 }
 
-header nav ul li a {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+header nav ul li {
+  font-size: 1.125em;
 }
 
 footer {
   flex-direction: column;
+  text-align: center;
 }
 
 footer .content-wrapper {
@@ -220,12 +224,10 @@ footer .content-wrapper {
 
 footer h4 {
   text-align: center;
-
 }
 
 footer p {
   margin: 0;
-  text-align: center;
 }
 
 footer .contact {
@@ -253,33 +255,28 @@ footer .copyright {
 /* Hero Area */
 
 .hero-area {
-  background: url(../img/baliwide-med.jpg) #2a423a fixed top center no-repeat;
+  background: url(../img/balidark-med.jpg) #2a423a fixed top center no-repeat;
   background-size: cover;
-}
-
-.hero-area .hero-content {
+  min-height: 350px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  background: #202322;
-  opacity: .6;
-  height: 350px;
 }
 
 .hero-area .content-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
   flex-direction: column;
 }
 
 .hero-area h1 {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  font-size: 2.24rem;
+  font-size: 2.25em;
   line-height: 2.6875rem;
   font-weight: 500;
-  color: #ffffff;
   margin: 0;
+  text-transform: capitalize;
 }
 
 /* Aside */
@@ -287,14 +284,9 @@ footer .copyright {
 aside {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: row wrap;
   background: #527158;
-}
-
-aside .form-description {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
 }
 
 aside .form {
@@ -327,6 +319,7 @@ input[type=button] {
 
 .features {
   background: url(../img/pushhandshoch.jpg);
+  background-size: cover;
 }
 
 .features .features-content {
@@ -355,6 +348,7 @@ input[type=button] {
 
 .features p {
   margin: 0;
+  text-align: center;
 }
 
 /* Reviews */
@@ -373,10 +367,11 @@ input[type=button] {
 .reviews h2 {
   margin-bottom: 40px;
   width: 100%;
+  line-height: 2.25rem;
 }
 
-.reviews p {
-  margin: 0;
+.reviews h3 {
+  margin: 20px 0;
 }
 
 /* ==========================================================================
@@ -399,6 +394,22 @@ input[type=button] {
   background: #2a423a;
 }
 
+.map figure {
+  width: 100%;
+  height: 0;
+  padding-bottom: 125%;
+  overflow: hidden;
+  position: relative;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .contact-content p {
   margin: 0;
 }
@@ -415,7 +426,7 @@ input[type=button] {
   background: #527158;
 }
 
-faq .content-wrapper {
+.faq .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -426,10 +437,15 @@ faq .content-wrapper {
 .faq h2 {
   margin-bottom: 40px;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .faq-content {
   margin-bottom: 50px;
+}
+
+.faq-content h4 {
+  line-height: 1.333;
 }
 
 /* ==========================================================================
@@ -531,23 +547,31 @@ faq .content-wrapper {
     margin: 100px 0;
   }
 
-  /*---------------- Base Header - Footer Styles ---------------------*/
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
+
+  /* Header */
 
   header {
-    padding: 0;
-    justify-content: center;
+    padding: 20px 0;
+    justify-content: space-around;
   }
 
   header .content-wrapper {
     justify-content: space-between;
+    width: 100%;
   }
 
   header figure {
     width: 30%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-flow: row wrap;
+
   }
 
   header nav ul {
@@ -562,36 +586,10 @@ faq .content-wrapper {
     display: none;
   }
 
-  footer .content-wrapper {
-    width: 90%;
-    margin: 100px 0;
-  }
-
-  footer .footer-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    flex-flow: row nowrap;
-  }
-
-  footer h4 {
-    margin: 0 0 40px 0;
-  }
-
-  footer .contact {
-    margin: 0;
-    text-align: center;
-  }
-
-  footer .social {
-    width: 30%;
-    text-align: center;
-  }
-
   /* Hero Area */
 
   .hero-area {
-    background: url(../img/baliwide-large.jpg) #2a423a fixed center center no-repeat;
+    background: url(../img/balidark-large.jpg) #2a423a fixed center center no-repeat;
     height: 600px;
   }
 
@@ -601,23 +599,24 @@ faq .content-wrapper {
     height: 600px;
   }
 
+  .hero-area h1 {
+    font-size: 3em;
+    line-height: 1;
+  }
+
   /* Aside */
 
   aside .content-wrapper {
     margin: 50px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-flow: row nowrap;
   }
 
-  aside .form-description {
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
     margin: 0;
     width: 40%;
-  }
-
-  aside .form {
-    width: 40%;
-    margin: 0;
   }
 
   /* Features */
@@ -634,49 +633,71 @@ faq .content-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
-    flex-basis: 35%;
+    flex-flow: column wrap;
+    flex-basis: 50%;
     margin: 30px 0;
   }
 
-  .features .features-items {
-    justify-content: space-around;
-    align-items: flex-start;
-
-  }
-
-  .features p {
-    margin: 0;
+  .features .features-item-description {
+    width: 62%;
   }
 
   /* Reviews */
 
   .reviews article {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .reviews h2 {
-    margin: 0;
+    width: 78%;
+    line-height: 3rem;
   }
 
-  .reviews .pic-txt {
-    display: flex;
-    align-items: center;
-    flex-flow: row nowrap;
-  }
-
-  .reviews img {
-    width: 50%;
+  .reviews article figure,
+  .reviews article div {
+    width: 49%;
   }
 
   .reviews h3 {
-    width: 60%;
-    margin: 0 0 20px 0;
+    width: 75%;
+    margin: 0;
   }
 
-  .reviews .review-txt {
-    margin-left: 10%;
+  /* Footer */
+
+  footer .content-wrapper {
+    width: 65%;
+    margin: 100px 0;
+  }
+
+  footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+  }
+
+  footer h4 {
+    margin: 0 0 40px 0;
+    font-size: 1.5em;
+  }
+
+  footer .contact {
+    margin-bottom: 0;
+  }
+
+  footer .social {
+    width: 30%;
+    text-align: center;
+  }
+
+  footer p {
+    line-height: 1.285;
+  }
+
+  footer .copyright {
+    width: 100%;
   }
 
   /* ==========================================================================
@@ -686,22 +707,25 @@ faq .content-wrapper {
   .mission-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    flex-flow: row nowrap;
+    align-items: center;
   }
 
-  .mission p {
+  .mission-content p {
     width: 47%;
   }
 
   .contact-section .content-wrapper h2 {
-    width: 65%;
+    width: 77%;
   }
 
   .contact-content {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: flex-start;
+  }
+
+  .contact-content h4 {
+    font-size: 1.5em;
   }
 
   .general-info {
@@ -716,17 +740,21 @@ faq .content-wrapper {
    FAQ Page
    ========================================================================== */
   .faq .content-wrapper {
-    margin: 50px 0 0 0;
-  }
-
-  .faq .faq-questions {
-    display: flex;
     justify-content: space-between;
-    flex-flow: row wrap;
   }
 
   .faq-content {
     flex-basis: 45%;
+  }
+
+  .faq h2 {
+    width: 100%;
+  }
+
+  .faq h4,
+  .faq p {
+    font-size: .875em;
+    line-height: 1.125;
   }
 }
 
@@ -735,35 +763,41 @@ faq .content-wrapper {
 @media only screen and (min-width: 1200px) {
   /* Desktop Styles here */
 
+  header {
+    padding: 15px 0;
+  }
+
   .content-wrapper {
     max-width: 960px;
   }
 
-  /*---------------- Base Header - Footer Styles ---------------------*/
-
-  header figure {
-    padding: 10px 0;
+  h2 {
+    font-size: 2.25em;
   }
+
+  h3,
+  h4 {
+    font-size: 1.875em;
+  }
+
+  p {
+    font-size: 1.125em;
+    line-height: 1.333;
+  }
+
+  /* Header */
 
   header nav ul li {
     padding: 0 20px;
   }
 
-  footer .content-wrapper {
-    width: 100%;
-  }
 
-  footer .footer-content {
-    justify-content: space-evenly;
-  }
-
-  footer .social {
-    width: 22%;
-  }
 
   /* Hero Area */
 
   .hero-area h1 {
+    font-size: 3.75em;
+    line-height: 1.1;
     width: 70%;
   }
 
@@ -778,14 +812,18 @@ faq .content-wrapper {
     width: 30%
   }
 
+  .form-description p {
+    font-size: 1.125em;
+  }
+
   /* Features */
 
   .features h2 {
-    width: 90%;
+    width: 70%;
   }
 
   .features article {
-    flex-basis: 23%;
+    flex-basis: 33%;
     margin: 0 10px 20px 10px;
   }
 
@@ -797,16 +835,28 @@ faq .content-wrapper {
     width: 80%;
   }
 
-  .reviews h3 {
-    width: auto;
+  .reviews article div {
+    width: 42%;
   }
+
+  /* Footer */
+
+  footer h4 {
+    font-size: 1.875em;
+  }
+
 
   /* ==========================================================================
    About Page
    ========================================================================== */
   .mission h2,
   .contact-section .content-wrapper h2 {
-    width: 90%
+    width: 95%;
+    font-size: 3em;
+  }
+
+  .contact-content h4 {
+    font-size: 1.875em;
   }
 
   /* ==========================================================================
@@ -814,6 +864,13 @@ faq .content-wrapper {
   ========================================================================== */
   .faq h2 {
     width: 100%;
+    font-size: 3em;
+  }
+
+  .faq h4,
+  .faq p {
+    font-size: 1.125em;
+    line-height: 1;
   }
 
 }
