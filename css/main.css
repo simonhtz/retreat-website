@@ -244,6 +244,10 @@ footer .social-icons p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #527158;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
 }
 
 footer .copyright {
@@ -433,7 +437,7 @@ input[type=button] {
 
 .faq .content-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-flow: row wrap;
   margin-top: 50px;
@@ -764,7 +768,7 @@ input[type=button] {
   .faq h4,
   .faq p {
     font-size: .875em;
-    line-height: 1.125;
+    line-height: .984rem;
   }
 }
 
