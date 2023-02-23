@@ -261,7 +261,7 @@ footer .copyright {
 .hero-area {
   background: url(../img/balidark-med.jpg) #2a423a fixed top center no-repeat;
   background-size: cover;
-  min-height: 350px;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -440,7 +440,6 @@ input[type=button] {
   justify-content: flex-start;
   align-items: flex-start;
   flex-flow: row wrap;
-  margin-top: 50px;
 }
 
 .faq h2 {
@@ -610,7 +609,7 @@ input[type=button] {
 
   .hero-area h1 {
     font-size: 3em;
-    line-height: 1;
+    line-height: 3.5rem;
     width: 80%;
   }
 
@@ -811,7 +810,7 @@ input[type=button] {
 
   .hero-area h1 {
     font-size: 3.75em;
-    line-height: 1.1;
+    line-height: 3.75rem;
     width: 70%;
   }
 
@@ -841,6 +840,9 @@ input[type=button] {
     margin: 30px 10px 20px;
   }
 
+  .features-items {
+    margin-top: 50px;
+  }
 
   /* Reviews */
 
