@@ -269,7 +269,7 @@ footer .copyright {
 
 .hero-area .content-wrapper {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-start;
   flex-direction: column;
 }
